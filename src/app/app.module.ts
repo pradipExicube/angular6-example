@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import {MaterialModule} from './material.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import * as firebase from 'firebase';
+import { AppRoutingModule } from './app-routing.module';
+import { TestPageComponent } from './test-page/test-page.component';
 
 var config = {
   apiKey: "AIzaSyANjUwZ_Xw2ziVE4FTnAI1klvRsWvWGMDY",
@@ -21,12 +23,14 @@ firebase.initializeApp(config);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TestPageComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,9 +11,10 @@
     <button mat-button color="accent">Accent</button>
     <button mat-button color="warn">Warn</button>
     <button mat-button disabled>Disabled</button>
-    <a mat-button routerLink=".">Link</a>
+    <a mat-button routerLink="/testPage" routerLinkActive="active">Link</a>
+    <router-outlet></router-outlet>
   </div>
-
+  <!-- <a class="dropdown-item" [routerLink]="['/admin-login']" (click)="onLoggedout()"> -->
 </div>
 <h2>Here are some links to help you start: </h2>
 <ul>
