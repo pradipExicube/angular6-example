@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 
 import {MaterialModule} from './material.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import * as firebase from 'firebase';
+//component
+import { LikeComponent } from '../components/likecomponent/like.component';
 
+import * as firebase from 'firebase';
 var config = {
   apiKey: "AIzaSyANjUwZ_Xw2ziVE4FTnAI1klvRsWvWGMDY",
   authDomain: "angular6-fda86.firebaseapp.com",
@@ -21,7 +22,8 @@ firebase.initializeApp(config);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,6 @@ firebase.initializeApp(config);
     MaterialModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
