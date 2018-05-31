@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+
+import {MaterialModule} from './material.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import * as firebase from 'firebase';
 
 var config = {
@@ -21,7 +24,9 @@ firebase.initializeApp(config);
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
