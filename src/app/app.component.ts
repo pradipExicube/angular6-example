@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-
+// import {LikeComponent} from '../components/likecomponent/like.component';
 
 @Component({
   selector: 'app-root',

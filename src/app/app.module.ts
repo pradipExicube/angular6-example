@@ -5,13 +5,17 @@ import { AppComponent } from './app.component';
 
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import * as firebase from 'firebase';
 
-
-
+//ROUTING
+import { AppRoutingModule } from './app-routing.module';
+//component
+import { LikeComponent } from '../components/likecomponent/like.component';
+//PAGE
+import { TestPageComponent } from './test-page/test-page.component';
 import { RegistraionComponent } from '../app/registraion/registraion.component';
 
+//FIREBASE
+import * as firebase from 'firebase';
 var config = {
   apiKey: "AIzaSyANjUwZ_Xw2ziVE4FTnAI1klvRsWvWGMDY",
   authDomain: "angular6-fda86.firebaseapp.com",
@@ -27,15 +31,18 @@ firebase.initializeApp(config);
 @NgModule({
   declarations: [
     AppComponent,
-    RegistraionComponent
+    RegistraionComponent,
+    TestPageComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
