@@ -1,0 +1,34 @@
+
+
+  <mat-card class="matcardMain">
+    <mat-card-title class="profileHead">Profile</mat-card-title>
+    <div class="example-container formInputs">
+      <form class="example-container" [formGroup]="formdata" (ngSubmit) = "update(formdata.value)">
+        <div class="imgcard"><img src="assets/imgs/icon.jpg"></div>
+        
+          <input type="file"   formControlName="image">
+       
+        <mat-form-field
+            [hideRequiredMarker]="formdata.value.hideRequired"
+            [floatLabel]="formdata.value.floatLabel">
+          <input type="text" matInput placeholder="First Name" required  formControlName="fname">
+          <mat-error *ngIf="formdata.controls.fname.hasError('required') && formdata.controls.fname.touched">First Name cannot be blank!</mat-error>
+        </mat-form-field>
+         <mat-form-field
+            [hideRequiredMarker]="formdata.value.hideRequired"
+            [floatLabel]="formdata.value.floatLabel">
+          <input type="text" matInput placeholder="Last Name" required formControlName="lname">
+          <mat-error *ngIf="formdata.controls.lname.hasError('required') && formdata.controls.lname.touched">Last Name cannot be blank!</mat-error>
+        </mat-form-field>
+        <mat-form-field
+            [hideRequiredMarker]="formdata.value.hideRequired"
+            [floatLabel]="formdata.value.floatLabel">
+          <input type="text" matInput placeholder="Mobile" required formControlName="mobile">
+          <mat-error *ngIf="formdata.controls.mobile.hasError('required') && formdata.controls.mobile.touched">Mobile cannot be blank!</mat-error>
+          <mat-error  *ngIf="formdata.controls.mobile.hasError('maxlength') && formdata.controls.mobile.touched">Sorry, maximum Mobile length is 10!!</mat-error>
+         
+        </mat-form-field>
+        <button type="submit" [disabled]="formdata.invalid" mat-button class="btnsubmit">Update</button>
+      </form>
+      </div>
+    </mat-card>
