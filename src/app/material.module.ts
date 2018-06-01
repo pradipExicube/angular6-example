@@ -26,6 +26,7 @@ import {
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
+    MatGridListModule,
     MatInputModule,
     MatGridListModule
   ]

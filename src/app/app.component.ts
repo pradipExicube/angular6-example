@@ -8,5 +8,24 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  title = 'app';
+  //card image component
+  status="likeiconActive"
+  iconname="question_answer"
+  //card image component end
+
+
+//card image component
+  clickimageicon(e){
+    console.log("like icon clicked");
+    console.log(e);
+  }
+  
+  //card image component
+  clickShareicon(e){
+    console.log("share icon clicked..");
+    console.log(e);
+
+  }
+
+
 }
