@@ -1,0 +1,45 @@
+
+<mat-card>
+  <mat-card-title>Registration</mat-card-title>
+  <img src="assets/imgs/demoImage.png" alt="Image" class="userImage">
+  <div class="bodyDiv">
+    <form class="example-container" [formGroup]="options" (ngSubmit)="registration( options)">
+      <mat-form-field
+        [hideRequiredMarker]="options.value.hideRequired"
+        [floatLabel]="options.value.floatLabel">
+        <mat-label>First Name</mat-label>
+        <input matInput type="text" formControlName="firstName" placeholder="First Name" required>
+        <!-- <mat-error *ngIf="firstName.invalid">{{getErrorMessage()}}</mat-error> -->
+      </mat-form-field>
+      <mat-form-field
+        [hideRequiredMarker]="options.value.hideRequired"
+        [floatLabel]="options.value.floatLabel">
+        <mat-label>Last Name</mat-label>
+        <input matInput type="text" formControlName="lastName" placeholder="Last Name" required>
+        <!-- <mat-error *ngIf="lastName.invalid">{{getErrorMessage()}}</mat-error> -->
+      </mat-form-field>
+      <mat-form-field
+        [hideRequiredMarker]="options.value.hideRequired"
+        [floatLabel]="options.value.floatLabel">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" placeholder="Email" required>
+        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+      </mat-form-field>
+      <mat-form-field
+        [hideRequiredMarker]="options.value.hideRequired"
+        [floatLabel]="options.value.floatLabel">
+        <mat-label>Mobile</mat-label>
+        <input matInput type="number" formControlName="mobile" placeholder="Mobile" required>
+        <!-- <mat-error *ngIf="mobile.invalid">{{getErrorMessage()}}</mat-error> -->
+      </mat-form-field>
+      <mat-form-field
+        [hideRequiredMarker]="options.value.hideRequired"
+        [floatLabel]="options.value.floatLabel">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" placeholder="Password" required>
+        <!-- <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error> -->
+      </mat-form-field>
+      <input mat-button class="registrationBtn" type="submit" value="Registration" >
+    </form>
+  </div>
+</mat-card>
