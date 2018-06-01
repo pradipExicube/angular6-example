@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
-import {MaterialModule} from './material.module';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 //ROUTING
 import { AppRoutingModule } from './app-routing.module';
 //component
@@ -11,6 +13,7 @@ import { LikeComponent } from '../components/likecomponent/like.component';
 import { CardimageComponent } from '../components/cardimagecomponent/cardimage.component';
 //PAGE
 import { TestPageComponent } from './test-page/test-page.component';
+import { RegistraionComponent } from '../app/registraion/registraion.component';
 
 //FIREBASE
 import * as firebase from 'firebase';
@@ -29,14 +32,16 @@ firebase.initializeApp(config);
 @NgModule({
   declarations: [
     AppComponent,
-    TestPageComponent,
-    LikeComponent,
     CardimageComponent
+    RegistraionComponent,
+    TestPageComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],
