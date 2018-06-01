@@ -44,7 +44,6 @@ firebase.initializeApp(config);
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule
