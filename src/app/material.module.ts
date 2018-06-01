@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
 import {
   MatButtonModule,
   MatMenuModule,
@@ -17,6 +17,7 @@ import {
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
+    MatFormFieldModule,
     MatInputModule,
     MatGridListModule
   ],
@@ -26,6 +27,7 @@ import {
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
+    MatFormFieldModule,
     MatGridListModule,
     MatInputModule,
     MatGridListModule

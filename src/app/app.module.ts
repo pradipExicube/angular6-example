@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
-import { MaterialModule } from './material.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {MaterialModule} from './material.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 //ROUTING
 import { AppRoutingModule } from './app-routing.module';
 //component
@@ -14,6 +15,7 @@ import { CardimageComponent } from '../components/cardimagecomponent/cardimage.c
 //PAGE
 import { TestPageComponent } from './test-page/test-page.component';
 import { RegistraionComponent } from '../app/registraion/registraion.component';
+import { ProfileComponent } from './profile/profile.component';
 
 //FIREBASE
 import * as firebase from 'firebase';
@@ -32,7 +34,8 @@ firebase.initializeApp(config);
 @NgModule({
   declarations: [
     AppComponent,
-    CardimageComponent
+    ProfileComponent,
+    CardimageComponent,
     RegistraionComponent,
     TestPageComponent,
     LikeComponent
@@ -41,6 +44,8 @@ firebase.initializeApp(config);
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
+    MatFormFieldModule,
+    FormsModule,
     ReactiveFormsModule,
     AppRoutingModule
   ],
