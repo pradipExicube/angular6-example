@@ -1,5 +1,5 @@
 
   <router-outlet></router-outlet>
   <!-- <a class="dropdown-item" [routerLink]="['/admin-login']" (click)="onLoggedout()"> -->
-  <likeComponent></likeComponent>
-
+  <!-- <likeComponent [likestatus]="status" [iconname]="iconname" (iconclick)="iconclick()"></likeComponent> -->
+  <cardimageComponent (likeIconClicked)="clickLikeicon($event)" (shareIconClicked)="clickShareicon($event)"></cardimageComponent>

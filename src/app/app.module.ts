@@ -8,6 +8,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 //component
 import { LikeComponent } from '../components/likecomponent/like.component';
+import { CardimageComponent } from '../components/cardimagecomponent/cardimage.component';
 //PAGE
 import { TestPageComponent } from './test-page/test-page.component';
 
@@ -28,8 +29,9 @@ firebase.initializeApp(config);
 @NgModule({
   declarations: [
     AppComponent,
-    TestPageComponent
-    LikeComponent
+    TestPageComponent,
+    LikeComponent,
+    CardimageComponent
   ],
   imports: [
     BrowserModule,
